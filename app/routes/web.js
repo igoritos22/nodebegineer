@@ -12,6 +12,12 @@ module.exports = function(app){
 
     });
 
+    app.post('/', function(req,res){
+
+        clienteController.store(req,res);
+
+    });
+
     app.get('/detalhe/:id', function(req,res){
 
         console.log(req.params.id);

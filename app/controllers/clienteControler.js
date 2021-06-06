@@ -8,8 +8,21 @@ module.exports.index = function(req,res){
     });
 };
 
-module.exports.store = function(){
+module.exports.store = function(req,res){
+    
+    var dados = req.body;
+    
+    clienteModel.save(dados, function(erro, resultado){
 
+        if (!erro ){
+            res.redirect('/');
+        }
+        else{
+            console.log("Erro desconhecido ao adicionar")
+            res.redirect('/');
+        }
+
+    });
     
 };
 

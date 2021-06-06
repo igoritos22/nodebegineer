@@ -13,5 +13,15 @@
                 <li><%= clientes[chave].Name%>  - <%= clientes[chave].email%></li>
             <%} %>
         </ul>
+        <br><br>
+        <br><br>
+        <form action="/" method="post">
+            <h2>Insira novos registros</h2>
+            <input type="text" name="Name" placeholder="Insira o nome">
+            <input type="text" name="email" placeholder="Insira o email">
+            <br><br>
+            <button>Adicionar elementos</button>
+
+        </form>
     </body>
 </html>
