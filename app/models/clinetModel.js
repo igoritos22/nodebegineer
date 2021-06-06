@@ -1,18 +1,11 @@
-var mysql = require('mysql');
-
-var conn = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'B8sZFG7Hn@',
-    database: 'nodelab_db'
-});
-
+var db = require('../../config/db')
 
 module.exports = function (){
 
-    
     this.all = function(){
 
+        var conn = db();
+        
         conn.query('select * from Persons',function(erro,resultado){
             console.log(resultado);
         });
