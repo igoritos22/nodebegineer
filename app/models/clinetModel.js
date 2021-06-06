@@ -2,18 +2,18 @@ var db = require('../../config/db')
 
 module.exports = function (){
 
-    this.all = function(){
+    this.all = function(retorno){
 
         var conn = db();
         
-        conn.query('select * from Persons',function(erro,resultado){
-            console.log(resultado);
-        });
+        return conn.query('select * from Persons',retorno);
+    };
 
-        return [{
-            nome: "Igor", 
-            email: "igoruser@bol.com"
-        }];
+    this.find = function(id, retorno){
+
+        var conn = db();
+        
+        return conn.query('select * from Persons where id = ?',id, retorno);
     };
 
     return this ;

@@ -2,16 +2,15 @@
     <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
-        <title>Home</title>
+        <title>Detalhes</title>
     </head>
     <body>
-        <h1>Home - Primeira pagina em NodeJS</h1>
+        <h1>Detalhes de cliente - </h1>
         <% var texto = "trabalhando com EJS"; %>
         <p>Estou <%= texto %></p>
         <ul>
-            <% for (var chave in clientes) {%>
-                <li><%= clientes[chave].Name%>  - <%= clientes[chave].email%></li>
-            <%} %>
+            
+                <li><%= cliente.Name%>  - <%= cliente.email%></li>
         </ul>
     </body>
 </html>
