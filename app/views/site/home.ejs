@@ -8,5 +8,10 @@
         <h1>Home - Primeira pagina em NodeJS</h1>
         <% var texto = "trabalhando com EJS"; %>
         <p>Estou <%= texto %></p>
+        <ul>
+            <% for (var chave in clientes) {%>
+                <li><%= clientes[chave].nome%> - <%= clientes[chave].email%></li>
+            <%} %>
+        </ul>
     </body>
 </html>
